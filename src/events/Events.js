@@ -21,7 +21,7 @@ class Events extends React.Component {
             { this.props.eventsStore.isLoading === false && this.props.eventsStore.data.length > 0
                 ?
                     <div className="container">
-                        <select  onChange={this.chooseLaunch}>
+                        <select onChange={this.chooseLaunch}>
                             <option value="" selected disabled hidden>Choose here</option>
                             {
                                 console.log(this.props.eventsStore.data),
