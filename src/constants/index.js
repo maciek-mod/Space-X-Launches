@@ -1,0 +1,9 @@
+// Events actions
+export const EVENTS_GET_START = 'EVENTS_GET_START';
+export const EVENTS_GET_SUCCESS = 'EVENTS_GET_SUCCESS';
+export const EVENTS_GET_ERROR = 'EVENTS_GET_ERROR';
+
+// Launches actions
+export const LAUNCHES_GET_START = 'LAUNCHES_GET_START';
+export const LAUNCHES_GET_SUCCESS = 'LAUNCHES_GET_SUCCESS';
+export const LAUNCHES_GET_ERROR = 'LAUNCHES_GET_ERROR';
