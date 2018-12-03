@@ -3,16 +3,18 @@ import PropTypes from 'prop-types';
 
 const LanuchesGallery = (props) => {
     return(
-        <div className="lanuches_gallery">
-            <p>Galeria</p>
-            {props.lanuchesGallery.length > 0
-            ?
-            props.lanuchesGallery.map( (item, key) => {
-                return <img src={item} key={key}  alt="photo"/>
-            })
-            :
-            "-"
-            }
+        <div className="container">
+            <h2>Galeria</h2>
+            <div className="lanuches_gallery">
+                {props.lanuchesGallery.length > 0
+                    ?
+                    props.lanuchesGallery.map( (item, key) => {
+                        return <img src={item} key={key}  alt="photo"/>
+                    })
+                    :
+                    "-"
+                }
+            </div>
         </div>
     );
 };

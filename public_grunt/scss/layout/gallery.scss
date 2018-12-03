@@ -1,0 +1,23 @@
+.launches_details{
+    h2{
+        font-weight: 600;
+        @include flFont(24px, 36px, 320px, 1920px);
+        @include flProperty("padding-top", 10px, 20px);
+        @include flProperty("padding-bottom", 10px, 20px);
+    }
+    .lanuches_gallery{
+        @media only screen and (min-width: 768px){
+            -webkit-column-count: 2; /* Chrome, Safari, Opera */
+            -moz-column-count: 2; /* Firefox */
+            column-count: 2;
+        }
+        @media only screen and (min-width: 1024px){
+            -webkit-column-count: 3; /* Chrome, Safari, Opera */
+            -moz-column-count: 3; /* Firefox */
+            column-count: 3;
+        }
+        img{
+            margin-bottom: 10px;
+        }
+    }
+}

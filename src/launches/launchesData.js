@@ -3,61 +3,90 @@ import PropTypes from 'prop-types';
 
 const LanuchesData = (props) => {
     return(
-        <div className="data_flex">
+        <div className="data_container">
 
-            <div className="data_left">
-                Mission name:
-            </div>
-            <div className="data_right">
-                {props.missionName}
-            </div>
-
-            <div className="data_left">
-                Site name:
-            </div>
-            <div className="data_right">
-                {props.siteNameLong}
+            <div className="row_data">
+                <div className="container">
+                    <div className="data_left">
+                        Mission name:
+                    </div>
+                    <div className="data_right">
+                        {props.missionName}
+                    </div>
+                </div>
             </div>
 
-            <div className="data_left">
-                Flight number:
-            </div>
-            <div className="data_right">
-                {props.numberId}
-            </div>
-
-            <div className="data_left">
-                Launch date utc:
-            </div>
-            <div className="data_right">
-                {props.launchDateUtc}
+            <div className="row_data">
+                <div className="container">
+                    <div className="data_left">
+                        Site name:
+                    </div>
+                    <div className="data_right">
+                        {props.siteNameLong}
+                    </div>
+                </div>
             </div>
 
-            <div className="data_left">
-                Rocket name:
-            </div>
-            <div className="data_right">
-                {props.rocketName}
-            </div>
-
-            <div className="data_left">
-                Details:
-            </div>
-            <div className="data_right">
-                {props.details !== null
-                ?
-                props.details
-                :
-                "-"
-                }
+            <div className="row_data">
+                <div className="container">
+                    <div className="data_left">
+                        Flight number:
+                    </div>
+                    <div className="data_right">
+                        {props.numberId}
+                    </div>
+                </div>
             </div>
 
-            <div className="data_left">
-                Mission patch:
+            <div className="row_data">
+                <div className="container">
+                    <div className="data_left">
+                        Launch date utc:
+                    </div>
+                    <div className="data_right">
+                        {props.launchDateUtc}
+                    </div>
+                </div>
             </div>
-            <div className="data_right">
-                <img src={props.missionPatch}  alt="patch"/>
+
+            <div className="row_data">
+                <div className="container">
+                    <div className="data_left">
+                        Rocket name:
+                    </div>
+                    <div className="data_right">
+                        {props.rocketName}
+                    </div>
+                </div>
             </div>
+
+            <div className="row_data">
+                <div className="container">
+                    <div className="data_left">
+                        Details:
+                    </div>
+                    <div className="data_right">
+                    {props.details !== null
+                        ?
+                        props.details
+                        :
+                        "-"
+                    }
+                    </div>
+                </div>
+            </div>
+
+            <div className="row_data">
+                <div className="container">
+                    <div className="data_left">
+                        Mission patch:
+                    </div>
+                    <div className="data_right">
+                        <img src={props.missionPatch}  alt="patch"/>
+                    </div>
+                </div>
+            </div>
+
         </div>
     );
 };

@@ -24,7 +24,7 @@ class Launches extends React.Component{
         }
         return (
             <Loading isLoading={this.props.launchesStore.isLoading}>
-                <div className="container">
+                <div className="">
                     {this.props.launchesStore.data !== null
                         ?
 

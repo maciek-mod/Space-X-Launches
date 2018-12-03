@@ -1,7 +1,6 @@
 import * as constants from '../constants';
 import fetch from 'isomorphic-fetch';
 
-
 export function getEventsStart(){
     return{
         type: constants.EVENTS_GET_START,
