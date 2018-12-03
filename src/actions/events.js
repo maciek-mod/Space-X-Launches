@@ -29,7 +29,6 @@ export function getEventsError(error){
 
 export function getEvents(launchesNumber){
 
-
     return (dispatch) => {
         dispatch(getEventsStart());
         fetch('https://api.spacexdata.com/v3/launches/past')

@@ -52,6 +52,12 @@ const LanuchesData = (props) => {
                 }
             </div>
 
+            <div className="data_left">
+                Mission patch:
+            </div>
+            <div className="data_right">
+                <img src={props.missionPatch}  alt="patch"/>
+            </div>
         </div>
     );
 };
