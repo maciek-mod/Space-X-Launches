@@ -32,6 +32,12 @@ const LanuchesSocial = (props) => {
                     :
                     null
                 }
+                {props.telemetry !== null
+                    ?
+                    <a href={props.telemetry} target="_blank">Telemetry</a>
+                    :
+                    null
+                }
 
             </div>
         </div>

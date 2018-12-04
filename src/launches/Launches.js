@@ -72,6 +72,7 @@ class Launches extends React.Component{
                                 redditLink={this.props.launchesStore.data.links.reddit_launch}
                                 wikipediaLink={this.props.launchesStore.data.links.wikipedia}
                                 articleLink={this.props.launchesStore.data.links.article_link}
+                                telemetry={this.props.launchesStore.data.telemetry.flight_club}
 
                             />
                         </div>
