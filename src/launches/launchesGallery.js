@@ -9,7 +9,7 @@ const LanuchesGallery = (props) => {
                 {props.lanuchesGallery.length > 0
                     ?
                     props.lanuchesGallery.map( (item, key) => {
-                        return <img src={item} key={key}  alt="photo"/>
+                        return <img onClick={props.showFull} src={item} key={key}  alt="photo"/>
                     })
                     :
                     "-"

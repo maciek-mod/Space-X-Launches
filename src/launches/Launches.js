@@ -16,6 +16,31 @@ class Launches extends React.Component{
         let idlaunches = this.getIdlaunch();
         this.props.getLanuches(idlaunches);
     }
+    showFull(el){
+        let img_src = el.target.src,
+            popup = document.getElementsByClassName("popup")[0],
+            img_container = document.getElementsByClassName("img_container")[0],
+            element = img_container.getElementsByTagName("IMG")[0],
+            img_width = el.target.clientWidth,
+            img_height = el.target.clientHeight,
+            close = document.getElementsByClassName("close")[0];
+
+        if (img_height < img_width) {
+            popup.classList.add("width");
+        }
+
+        element.src = img_src;
+        popup.classList.add("show");
+
+        close.addEventListener("click", function(event){
+            popup.classList.remove("show");
+            element.src = "";
+            if (popup.classList.contains("width")) {
+                popup.classList.remove("width");
+            }
+        });
+    }
+
 
     render(){
         console.log(this.props.launchesStore.data);
@@ -40,6 +65,7 @@ class Launches extends React.Component{
                             />
                             <LanuchesGallery
                                 lanuchesGallery={this.props.launchesStore.data.links.flickr_images}
+                                showFull={this.showFull.bind(this)}
                             />
                             <LanuchesSocial
                                 youtubeLink={this.props.launchesStore.data.links.video_link}
