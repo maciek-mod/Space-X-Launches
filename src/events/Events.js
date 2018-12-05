@@ -4,6 +4,21 @@ import * as actions from '../actions/events';
 import Loading from "../common/loading";
 
 
+
+// function scroll() {
+//     let height = window.scrollY;
+//     let menu = document.querySelector("header");
+//     if (height > 60) {
+//         console.log("dodawaj");
+//         menu.classList.add('slide');
+//     } else {
+//         console.log("-");
+//         menu.classList.remove('slide');
+//     }
+// }
+// window.onscroll = scroll;
+// scroll();
+
 class Events extends React.Component {
 
     componentDidMount() {
@@ -20,16 +35,19 @@ class Events extends React.Component {
             <Loading isLoading={this.props.eventsStore.isLoading}>
             { this.props.eventsStore.isLoading === false && this.props.eventsStore.data.length > 0
                 ?
-                    <div className="container">
-                        <select onChange={this.chooseLaunch}>
-                            <option value="" selected disabled hidden>Choose here</option>
-                            {
-                                console.log(this.props.eventsStore.data),
-                                this.props.eventsStore.data.map((item) => {
-                                    return <option key={item.launch_date_unix} value={item.flight_number}>{item.flight_number}</option>;
-                                })
-                            }
-                        </select>
+                    <div className="choose_view">
+                        <div className="container">
+                            <h2>Choose the flight number</h2>
+                            <select onChange={this.chooseLaunch}>
+                                <option value="" selected disabled hidden>Choose here</option>
+                                {
+                                    console.log(this.props.eventsStore.data),
+                                    this.props.eventsStore.data.map((item) => {
+                                        return <option key={item.launch_date_unix} value={item.flight_number}>{item.flight_number}</option>;
+                                    })
+                                }
+                            </select>
+                        </div>
                     </div>
                 :
                     <div className="container">

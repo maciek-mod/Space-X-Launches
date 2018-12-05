@@ -4,7 +4,12 @@ const Loading = (props) => {
     if (props.isLoading) {
         return(
             <div id="loader">
-                loading
+                <div className="lds-ring">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
             </div>
         )
     } else{

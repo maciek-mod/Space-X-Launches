@@ -1,9 +1,12 @@
 @import "lib/_reset.scss";
 @import "lib/_mixin.scss";
 @import "lib/_font.scss";
+@import "layout/header.scss";
+@import "layout/choose_view.scss";
 @import "layout/details.scss";
 @import "layout/gallery.scss";
-
+@import "layout/about_page.scss";
+@import "layout/social_box.scss";
 
 
 body {
@@ -11,6 +14,7 @@ body {
     font-family: 'Lato', sans-serif;
     font-weight: 400;
     font-size: 10px;
+    padding-top: 60px;
     @media only screen and (min-width: 1024px) {
         font-size: 10px;
     }
@@ -57,69 +61,45 @@ body {
     align-items: center;
     justify-content: center;
 
-    .loader {
+
+    .lds-ring {
+        display: inline-block;
         position: relative;
-        margin: 0 auto;
-        border: 5px solid $clouds;
-        width: 100px;
-        height: 60px;
+        width: 64px;
+        height: 64px;
     }
 
-    .loader__page {
+    .lds-ring div {
+        box-sizing: border-box;
+        display: block;
         position: absolute;
-        left: 50%;
-        top: -5px;
-        margin: 0 auto;
-        border-top: 5px solid $clouds;
-        border-bottom: 5px solid $clouds;
-        border-right: 5px solid $clouds;
-        background: $peter-river;
-        width: 50px;
-        height: 60px;
-        transform-origin: 0 50%;
-        animation: flip .8s infinite linear;
-        animation-fill-mode: forwards;
-        @for $i from 1 through 3 {
-            &:nth-child(#{$i}) {
-                z-index: -$i;
-                animation-delay: .3s*$i;
-            }
-        }
+        width: 51px;
+        height: 51px;
+        margin: 6px;
+        border: 6px solid #fff;
+        border-radius: 50%;
+        animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+        border-color: #fff transparent transparent transparent;
     }
-    @keyframes flip {
+
+    .lds-ring div:nth-child(1) {
+        animation-delay: -0.45s;
+    }
+
+    .lds-ring div:nth-child(2) {
+        animation-delay: -0.3s;
+    }
+
+    .lds-ring div:nth-child(3) {
+        animation-delay: -0.15s;
+    }
+    @keyframes lds-ring {
         0% {
-            transform: perspective(600px) rotateY(-0deg);
-        }
-
-        20% {
-            background: darken($peter-river,10%);
-        }
-
-        29.9% {
-            background: darken($peter-river,10%);
-        }
-
-        30% {
-            transform: perspective(200px) rotateY(-90deg);
-            background: $peter-river;
-        }
-
-        54.999% {
-            opacity: 1;
-        }
-
-        55% {
-            opacity: 0;
-        }
-
-        60% {
-            transform: perspective(200px) rotateY(-180deg);
-            background: $peter-river;
+            transform: rotate(0deg);
         }
 
         100% {
-            transform: perspective(200px) rotateY(-180deg);
-            background: $peter-river;
+            transform: rotate(360deg);
         }
     }
 }
