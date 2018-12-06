@@ -25,6 +25,8 @@ class Launches extends React.Component{
             img_height = el.target.clientHeight,
             close = document.getElementsByClassName("close")[0];
 
+        console.log(img_container);
+
         if (img_height < img_width) {
             popup.classList.add("width");
         }
@@ -43,10 +45,10 @@ class Launches extends React.Component{
 
 
     render(){
-        console.log(this.props.launchesStore.data);
-        if (this.props.launchesStore.data !== null) {
-            // console.log(this.props.launchesStore.data.links.flickr_images);
-        }
+        // console.log(this.props.launchesStore.data);
+        // if (this.props.launchesStore.data !== null) {
+        //     // console.log(this.props.launchesStore.data.links.flickr_images);
+        // }
         return (
             <Loading isLoading={this.props.launchesStore.isLoading}>
                 <div className="">

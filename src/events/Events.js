@@ -4,21 +4,6 @@ import * as actions from '../actions/events';
 import Loading from "../common/loading";
 
 
-
-// function scroll() {
-//     let height = window.scrollY;
-//     let menu = document.querySelector("header");
-//     if (height > 60) {
-//         console.log("dodawaj");
-//         menu.classList.add('slide');
-//     } else {
-//         console.log("-");
-//         menu.classList.remove('slide');
-//     }
-// }
-// window.onscroll = scroll;
-// scroll();
-
 class Events extends React.Component {
 
     componentDidMount() {
@@ -37,7 +22,7 @@ class Events extends React.Component {
                 ?
                     <div className="choose_view">
                         <div className="container">
-                            <h2>Choose the flight number</h2>
+                            <h2>Choose a Space X number flight</h2>
                             <select onChange={this.chooseLaunch}>
                                 <option value="" selected disabled hidden>Choose here</option>
                                 {

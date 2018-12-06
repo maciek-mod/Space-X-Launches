@@ -76,13 +76,13 @@ const LanuchesData = (props) => {
                 </div>
             </div>
 
-            <div className="row_data">
+            <div className="row_data patch_section">
                 <div className="container">
-                    <div className="data_left">
-                        Mission patch:
-                    </div>
-                    <div className="data_right">
+                    <div className="img_container_data">
                         <img src={props.missionPatch}  alt="patch"/>
+                    </div>
+                    <div className="text_container">
+                        Mission patch:
                     </div>
                 </div>
             </div>
