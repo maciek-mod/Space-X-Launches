@@ -26,7 +26,6 @@ class Events extends React.Component {
                             <select onChange={this.chooseLaunch}>
                                 <option value="" selected disabled hidden>Choose here</option>
                                 {
-                                    console.log(this.props.eventsStore.data),
                                     this.props.eventsStore.data.map((item) => {
                                         return <option key={item.launch_date_unix} value={item.flight_number}>{item.flight_number}</option>;
                                     })
