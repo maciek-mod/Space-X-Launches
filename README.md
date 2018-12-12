@@ -1,1 +1,3 @@
-App in progress. prev -> http://spacex.mackar.usermd.net/
+App in progress.
+App built in ReactJS.
+prev -> http://spacex.mackar.usermd.net/

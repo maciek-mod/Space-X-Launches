@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const LanuchesGallery = (props) => {
     return(
         <div className="container">
-            <h2>Galeria</h2>
+            <h2>Gallery</h2>
             <div className="lanuches_gallery">
                 {props.lanuchesGallery.length > 0
                     ?

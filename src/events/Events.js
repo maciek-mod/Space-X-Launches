@@ -8,6 +8,7 @@ class Events extends React.Component {
 
     componentDidMount() {
         this.props.getEvents();
+
     }
 
     chooseLaunch(event){
